@@ -1,10 +1,20 @@
 sap.ui.define([
-	"sap/ui/base/ManagedObject"
+	"sap/ui/core/UIComponent"
 ], function(
-	ManagedObject
+	UIComponent
 ) {
 	"use strict";
 
-	return ManagedObject.extend("undefined", {
+	return UIComponent.extend("sap.ui.demo.walkthrough.Component", {
+
+		metadata: {
+			interfaces: ["sap.ui.core.IAsyncContentCreation"],
+			manifest: "json"
+		},
+
+		init: function(){
+			UIComponent.prototype.init.apply(this, arguments);
+			this.getRouter().initialize(); // Router initializen
+		}
 	});
 });

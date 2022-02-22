@@ -5,6 +5,7 @@ sap.ui.define([
 ) {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.walkthrough.App", {
+	return Controller.extend("sap.ui.demo.walkthrough.controller.App", {
+ 
 	});
 });
